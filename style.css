@@ -1,0 +1,160 @@
+/*
+Theme Name: Kurdistan Exam
+Theme URI: https://kurdistanexam.rf.gd
+Description: تیمی تایبەت بۆ تاقیکردنەوەی پۆلی ١٢ی هەرێمی کوردستان - پشتگیری RTL
+Author: تیمی KurdistanExam
+Author URI: https://kurdistanexam.rf.gd
+Version: 1.2
+Text Domain: kurdistan-exam
+*/
+
+/* ڕەنگە سەرەکییەکان */
+:root {
+  --primary: #4CAF50;       /* سەوزی سەرەکی */
+  --primary-dark: #2E7D32;  /* سەوزی تۆخ */
+  --text: #333;             /* ڕەنگی نووسین */
+  --background: #f8f9fa;    /* پاشبنەما */
+  --white: #fff;            /* سپی */
+  --shadow: 0 2px 10px rgba(0,0,0,0.1); /* سێبەر */
+}
+
+/* ڕێکخستنە سەرەکییەکان */
+body {
+  font-family: 'NRT Reg', 'Segoe UI', Tahoma, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  direction: rtl;
+}
+
+/* پەڕەی سەرەکی */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* سەرپەڕ */
+.header {
+  background: linear-gradient(to left, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* پرسیارەکان */
+.question {
+  background: var(--white);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border-right: 4px solid var(--primary);
+}
+
+.question h2 {
+  color: var(--primary-dark);
+  margin-top: 0;
+}
+
+/* هەڵبژاردنەکان */
+.options {
+  margin: 1.5rem 0;
+}
+
+.option {
+  display: block;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  background: #f1f1f1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  padding-right: 3rem;
+}
+
+.option:hover {
+  background: #e0e0e0;
+  transform: translateX(-5px);
+}
+
+.option::before {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+/* دووگمەکان */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* وەڵامی ڕاست */
+.correct {
+  background: #dff0d8;
+  border-right: 4px solid #3c763d;
+}
+
+/* وەڵامی هەڵە */
+.incorrect {
+  background: #f2dede;
+  border-right: 4px solid #a94442;
+}
+
+/* پەپەڕە */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #333;
+  color: var(--white);
+}
+
+/* بۆ مۆبایل */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .question {
+    padding: 1rem;
+  }
+}
